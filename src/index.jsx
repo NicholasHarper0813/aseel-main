@@ -1,12 +1,13 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import React from 'react';
 var LoadingIcon = require('./Loading_icon.gif');
 
-// Load the CSS
 require('./style.scss');
 
-class Posts extends React.Component {
-    constructor(props) {
+class Posts extends React.Component 
+{
+    constructor(props) 
+    {
         super(props);
         this.getMorePosts = this.getMorePosts.bind(this);
         this.state = {
@@ -16,14 +17,11 @@ class Posts extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount() 
+    {
         var that = this;
         window.onbeforeunload = function() {window.scrollTo(0,0);}
-
-        // init controller
         var controller = new ScrollMagic.Controller();
-
-        // build scene
         var scene = new ScrollMagic.Scene({ triggerElement: "#posts-here", triggerHook: "onEnter" })
             .addTo(controller)
             .on("enter", function (e) {
@@ -36,7 +34,6 @@ class Posts extends React.Component {
     getMorePosts() {
         var that = this;
         var totalPages;
-        // adding a loader
         jQuery("#loader").addClass("active");
         this.setState({ page: this.state.page + 1 });
 
@@ -62,30 +59,26 @@ class Posts extends React.Component {
                     if (results[0] == null) {
                         jQuery("#loader").remove();
                     }
-                    // removing loader
                     jQuery("#loader").removeClass("active");
                     var controller2 = new ScrollMagic.Controller();
-                    // loop through each .posts-container .post-excerpt element
                     jQuery('.posts-container .post-excerpt').each(function () {
-
-                        // build a scene
                         var ourScene2 = new ScrollMagic.Scene({
                             triggerElement: this.children[0],
                             reverse: false,
                             triggerHook: 1
                         })
-                            .setClassToggle(this, 'fade-in') // add class to project01
+                            .setClassToggle(this, 'fade-in')
                             .addTo(controller2);
                     });
                 });
             }).catch(function (error) {
                 console.log('There has been a problem with your fetch operation: ' + error.message);
                 jQuery("#loader").remove();
-
             });
     }
 
-    render() {
+    render() 
+    {
         return (
             <div>
                 <div className="posts-container"></div>
