@@ -1,5 +1,6 @@
 <?php 
-if ( post_password_required() ) {
+if ( post_password_required() )
+{
 	return;
 }
 ?>
@@ -12,7 +13,6 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) 
 			{
-				/* translators: %s: post title */
 				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'aseel' ), get_the_title() );
 			} 
 			else 
