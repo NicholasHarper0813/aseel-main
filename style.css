@@ -1,64 +1,13 @@
-/*
-Theme Name: Aseel
-Theme URI: https://wordpress.org/themes/aseel/
-Author: the WordPress team
-Author URI: https://wordpress.org/
-Description: Aseel brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
-Version: 1.3
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: aseel
-Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 Normalize
-2.0 Accessibility
-3.0 Alignments
-4.0 Clearings
-5.0 Typography
-6.0 Forms
-7.0 Formatting
-8.0 Lists
-9.0 Tables
-10.0 Links
-11.0 Featured Image Hover
-12.0 Navigation
-13.0 Layout
-   13.1 Header
-   13.2 Front Page
-   13.3 Regular Content
-   13.4 Posts
-   13.5 Pages
-   13.6 Footer
-14.0 Comments
-15.0 Widgets
-16.0 Media
-   16.1 Galleries
-17.0 Customizer
-18.0 SVGs Fallbacks
-19.0 Media Queries
-20.0 Print
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-1.0 Normalize
-Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
---------------------------------------------------------------*/
-
-html {
+html 
+{
 	font-family: sans-serif;
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
 
-body {
+body 
+{
 	margin: 0;
 }
 
@@ -67,26 +16,31 @@ aside,
 footer,
 header,
 nav,
-section {
+section 
+{
 	display: block;
 }
 
-h1 {
+h1
+{
 	font-size: 2em;
 	margin: 0.67em 0;
 }
 
 figcaption,
 figure,
-main {
+main
+{
 	display: block;
 }
 
-figure {
+figure 
+{
 	margin: 1em 0;
 }
 
-hr {
+hr
+{
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -94,7 +48,8 @@ hr {
 	overflow: visible;
 }
 
-pre {
+pre
+{
 	font-family: monospace, monospace;
 	font-size: 1em;
 }
@@ -105,76 +60,91 @@ a {
 }
 
 a:active,
-a:hover {
+a:hover 
+{
 	outline-width: 0;
 }
 
-abbr[title] {
+abbr[title]
+{
 	border-bottom: 1px #767676 dotted;
 	text-decoration: none;
 }
 
 b,
-strong {
+strong 
+{
 	font-weight: inherit;
 }
 
 b,
-strong {
+strong 
+{
 	font-weight: 700;
 }
 
 code,
 kbd,
-samp {
+samp 
+{
 	font-family: monospace, monospace;
 	font-size: 1em;
 }
 
-dfn {
+dfn 
+{
 	font-style: italic;
 }
 
-mark {
+mark
+{
 	background-color: #eee;
 	color: #222;
 }
 
-small {
+small 
+{
 	font-size: 80%;
 }
 
 sub,
-sup {
+sup 
+{
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
 
-sub {
+sub 
+{
 	bottom: -0.25em;
 }
 
-sup {
+sup 
+{
 	top: -0.5em;
 }
 
 audio,
-video {
+video 
+{
 	display: inline-block;
 }
 
-audio:not([controls]) {
+audio:not([controls]) 
+{
 	display: none;
 	height: 0;
 }
 
-img {
+img 
+{
 	border-style: none;
 }
 
-svg:not(:root) {
+svg:not(:root) 
+{
 	overflow: hidden;
 }
 
@@ -182,7 +152,8 @@ button,
 input,
 optgroup,
 select,
-textarea {
+textarea 
+{
 	font-family: sans-serif;
 	font-size: 100%;
 	line-height: 1.15;
@@ -190,26 +161,30 @@ textarea {
 }
 
 button,
-input {
+input 
+{
 	overflow: visible;
 }
 
 button,
-select {
+select 
+{
 	text-transform: none;
 }
 
 button,
 html [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"] 
+{
 	-webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type="submit"]::-moz-focus-inner 
+{
 	border-style: none;
 	padding: 0;
 }
@@ -217,25 +192,28 @@ button::-moz-focus-inner,
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type="submit"]:-moz-focusring 
+{
 	outline: 1px dotted ButtonText;
 }
 
-fieldset {
+fieldset 
+{
 	border: 1px solid #bbb;
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
 
-legend {
+legend 
+{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	color: inherit;
-	display: table;
 	max-width: 100%;
-	padding: 0;
+	display: table;
 	white-space: normal;
+	padding: 0;
 }
 
 progress {
