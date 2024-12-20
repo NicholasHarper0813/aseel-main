@@ -1,15 +1,19 @@
 var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-module.exports = {
-    entry: {
+module.exports = 
+{
+    entry: 
+    {
         app: './src/index.jsx'
     },
-    output: {
+    output:
+    {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
-    module: {
+    module: 
+    {
         rules: [
             {
                 test: /\.scss$/,
@@ -28,12 +32,11 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
                     'file-loader?name=[name].[ext]&outputPath=images/&publicPath=wp-content/themes/aseel/dist/',
-                    // 'file-loader?name=[name].[ext]',
-                    // 'file-loader?name=[name].[ext]&outputPath=images/&publicPath=',
                     'image-webpack-loader'
                 ]
             },
-            { test: 
+            { 
+                test: 
                 /\.(woff2?|svg)$/, 
                 loader: 'url-loader?limit=10000&name=fonts/[name].[ext]' 
             },
@@ -43,7 +46,8 @@ module.exports = {
             }
         ]
     },
-    resolve: {
+    resolve: 
+    {
         extensions: ['.js', '.jsx']
     },
     plugins: [
